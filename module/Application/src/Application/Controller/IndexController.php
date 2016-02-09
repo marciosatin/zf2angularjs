@@ -33,12 +33,12 @@ class IndexController extends AbstractActionController
 //            'descricao' => 'Super máquina',
 //            'categoriaId' => 1
 //        ));
-        $produtoSerice->update(array(
-            'id' => 4,
-            'nome' => 'Macbook 15',
-            'descricao' => 'Legal',
-            'categoriaId' => 3,
-        ));
+//        $produtoSerice->update(array(
+//            'id' => 4,
+//            'nome' => 'Macbook 15',
+//            'descricao' => 'Legal',
+//            'categoriaId' => 3,
+//        ));
         
         
 //        $categoria = $repo->find(1);

@@ -25,6 +25,9 @@ return array(
     ),
     
     'doctrine' => array(
+        'fixture' => array(
+            'SUser_fixture' => __DIR__ . '/../src/SUser/Fixture',
+        ),
         'driver' => array(
             __NAMESPACE__.'_driver' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
