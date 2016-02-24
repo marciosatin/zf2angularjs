@@ -1,1 +1,17 @@
-<p>{{nome}}! Olá mundo!</p>
+<h2>Categorias</h2>
+<table class="table"> 
+    <thead> 
+        <tr> 
+            <th>#</th> 
+            <th>Categoria</th> 
+            <th>Ação</th> 
+        </tr> 
+    </thead> 
+    <tbody> 
+        <tr ng-repeat="registro in registros"> 
+            <td>{{registro.id}}</td> 
+            <td>{{registro.nome}}</td> 
+            <td>x</td> 
+        </tr> 
+    </tbody> 
+</table>
