@@ -10,7 +10,7 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">ZF2 AngularJs</a>
+                    <a class="navbar-brand" href="/#/">ZF2 AngularJs</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -23,12 +23,12 @@
         <div class="container">
             <!-- Main component for a primary marketing message or call to action -->
             <div class="jumbotron" ng-controller="CategoriaCtrl">
-                <h1>{{nome}}</h1>
-                <p></p>
+                <div ng-view></div>
             </div>
         </div> <!-- /container -->
         <script src="/js/angular.min.js"></script>
-        <script src="/js/projetoangular/categoria.js"></script>
-        <script src="/js/projetoangular/categoriaCtrl.js"></script>
+        <script src="/js/angular-route.min.js"></script>
+        <script src="/projetoangular/categoria.js"></script>
+        <script src="/projetoangular/categoriaCtrl.js"></script>
     </body>
 </html>
