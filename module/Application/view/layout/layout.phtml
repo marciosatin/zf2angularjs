@@ -1,34 +1,19 @@
 <?php echo $this->doctype(); ?>
-<html lang="en" ng-app="Categorias">
+<html lang="en" ng-app="">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Zf2 Angular</title>
-        <link href="/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
+        <script src="/js/angular.min.js"></script>
     </head>
     <body>
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Zf2 Angular</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Produtos</a></li>
-                    <li><a href="#about">Categorias</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
+        <div ng-controller="CtrlApp">
+            <input type="text" ng-model="nome">
+            <h1>{{nome}}</h1>
         </div>
-        <div class="container">
-
-            <div class="starter-template" ng-controller="CategoriasCtrl">
-                <h1>Conteúdo</h1>
-                <p class="lead">{{nome}}</p>
-            </div>
-
-        </div><!-- /.container -->
-        <script src="/js/angular.min.js"></script>
-        <script src="/js/projetoangular/Categorias.js"></script>
-        <script src="/js/projetoangular/CategoriasCtrl.js"></script>
+        <script>
+           var CtrlApp = function($scope){
+               $scope.nome = "Marcio";
+           }
+        </script>
     </body>
 </html>
