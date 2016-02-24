@@ -1,19 +1,34 @@
 <?php echo $this->doctype(); ?>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="Categoria">
     <head>
         <meta charset="utf-8">
         <title>Zf2 Angular</title>
-        <script src="/js/angular.min.js"></script>
+        <link href="/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div ng-controller="CtrlApp">
-            <input type="text" ng-model="nome">
-            <h1>{{nome}}</h1>
-        </div>
-        <script>
-           var CtrlApp = function($scope){
-               $scope.nome = "Marcio";
-           }
-        </script>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">ZF2 AngularJs</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Categorias</a></li>
+                        <li><a href="#about">Produtos</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <!-- Main component for a primary marketing message or call to action -->
+            <div class="jumbotron" ng-controller="CategoriaCtrl">
+                <h1>{{nome}}</h1>
+                <p></p>
+            </div>
+        </div> <!-- /container -->
+        <script src="/js/angular.min.js"></script>
+        <script src="/js/projetoangular/categoria.js"></script>
+        <script src="/js/projetoangular/categoriaCtrl.js"></script>
     </body>
 </html>
