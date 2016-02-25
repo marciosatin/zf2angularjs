@@ -1,9 +1,12 @@
-categoria.controller('CategoriaCtrl', ['$scope', 'CategoriaSrv', '$location', function($scope, CategoriaSrv, $location) {
-        $scope.nome = "Marcio";
+categoria.controller('CategoriaCtrl', ['$scope', 'CategoriaSrv', '$location', '$routeParams',
+    function($scope, CategoriaSrv, $location, $routeParams) {
         $scope.load = function() {
             $scope.registros = CategoriaSrv.query();
         };
-        $scope.load();
+        
+        $scope.get = function () {
+            $scope.item = CategoriaSrv.get({id: $routeParams.id});
+        };
 
         $scope.add = function(item) {
             $scope.result = CategoriaSrv.save(
@@ -13,7 +16,20 @@ categoria.controller('CategoriaCtrl', ['$scope', 'CategoriaSrv', '$location', fu
                         $location.path('/categorias');
                     },
                     function(data, status, headers, config) {
-                        alert('Erro ao inserir registo' + data.messages[0]);
+                        alert('Erro ao inserir registro' + data.messages[0]);
+                    }
+            );
+        };
+
+        $scope.editar = function(item) {
+            $scope.result = CategoriaSrv.update(
+                    {id: $routeParams.id},
+                    item,
+                    function(data, status, headers, config) {
+                        $location.path('/categorias');
+                    },
+                    function(data, status, headers, config) {
+                        alert('Erro ao editar registro' + data.messages[0]);
                     }
             );
         };

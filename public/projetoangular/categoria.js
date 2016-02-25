@@ -7,5 +7,8 @@ categoria.config(['$routeProvider', function($routeProvider) {
                 })
                 .when('/categorias/novo/', {
                     templateUrl: 'projetoangular/templates/novacategoria.html'
+                })
+                .when('/categorias/editar/:id', {
+                    templateUrl: 'projetoangular/templates/editarcategoria.html'
                 });
     }]);
