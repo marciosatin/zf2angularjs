@@ -1,7 +1,11 @@
 var categoria = angular.module('Categoria', ['ngRoute', 'ngResource']);
 
-categoria.config(['$routeProvider', function($routeProvider){
-        $routeProvider.when('/', {
-            templateUrl: 'projetoangular/templates/categoria.html' 
-        });
-}]);
+categoria.config(['$routeProvider', function($routeProvider) {
+        $routeProvider
+                .when('/categorias', {
+                    templateUrl: 'projetoangular/templates/categoria.html'
+                })
+                .when('/categorias/novo/', {
+                    templateUrl: 'projetoangular/templates/novacategoria.html'
+                });
+    }]);

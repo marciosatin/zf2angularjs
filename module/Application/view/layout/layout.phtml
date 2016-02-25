@@ -14,18 +14,22 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Categorias</a></li>
-                        <li><a href="#about">Produtos</a></li>
+                        <li class="active"><a href="/#/categorias">Categorias</a></li>
+                        <li><a href="/#/produtos">Produtos</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
         <div class="container">
             <!-- Main component for a primary marketing message or call to action -->
-            <div class="jumbotron" ng-controller="CategoriaCtrl">
-                <div ng-view></div>
+            <div ng-controller="CategoriaCtrl">
+                <div class="row">
+                    <?php echo $this->content; ?>
+                    <div ng-view></div>
+                </div>
             </div>
         </div> <!-- /container -->
+        <script src="/js/jquery.min.js"></script>
         <script src="/js/angular.min.js"></script>
         <script src="/js/angular-route.min.js"></script>
         <script src="/js/angular-resource.min.js"></script>
