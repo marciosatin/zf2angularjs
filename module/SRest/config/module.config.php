@@ -20,7 +20,8 @@ return array(
     
     'controllers' => array(
         'invokables' => array(
-            'categoria' => 'SRest\Controller\CategoriaController'
+            'categoria' => 'SRest\Controller\CategoriaController',
+            'produto' => 'SRest\Controller\ProdutoController'
         )
     ),
     
