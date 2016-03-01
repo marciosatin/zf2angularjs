@@ -20,15 +20,7 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
-        <div class="container">
-            <!-- Main component for a primary marketing message or call to action -->
-            <div ng-controller="CategoriaCtrl">
-                <div class="row">
-                    <?php echo $this->content; ?>
-                    <div ng-view></div>
-                </div>
-            </div>
-        </div> <!-- /container -->
+        <?php echo $this->content; ?>
         <script src="/js/jquery.min.js"></script>
         <script src="/js/angular.min.js"></script>
         <script src="/js/angular-route.min.js"></script>

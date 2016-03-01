@@ -33,4 +33,19 @@ categoria.controller('CategoriaCtrl', ['$scope', 'CategoriaSrv', '$location', '$
                     }
             );
         };
+        
+        $scope.delete = function(id) {
+            if (confirm("Deseja realmente excluir o registro?")) {
+                CategoriaSrv.remove(
+                    {id: id},
+                    {},
+                    function(data, status, headers, config) {
+                        $location.path('/categorias');
+                    },
+                    function(data, status, headers, config) {
+                        alert('Erro ao editar registro' + data.messages[0]);
+                    }
+                );
+            }
+        };
     }]);
